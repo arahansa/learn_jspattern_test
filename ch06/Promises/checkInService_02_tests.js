@@ -31,11 +31,19 @@ describe('Conference.checkInService', function(){
 				expect(checkInRecorder.recordCheckIn).toHaveBeenCalledWith(attendee);
 			});
 
-			// 6장에서 추가한 테스트
-			it('참가자의 checkInNumber를 지정한다', function(done){
-				checkInService.checkIn(attendee);
-				expect(attendee.getCheckInNumber()).toBe(checkInNumber);
+			// 6장에서 추가된 테스트
+			it("참가자의 checkInNumber를 지정한다", function(done) {
+				checkInService.checkIn(attendee).then(
+					function promiseResolved() {
+						expect(attendee.getCheckInNumber()).toBe(checkInNumber);
+						done();
+					},
+					function promiseRejected() {
+						expect('이 실패 분기 코드가 실행됐다').toBe(false);
+						done();
+					});
 			});
+
 		});
 	});
 });

@@ -11,7 +11,7 @@ Conference.checkedInAttendeeCounter = function(){
 		},
 		countIfCheckedIn : function(attendee){
 			if(attendee.isCheckedIn()){
-				this.increment();
+				self.increment();
 			}
 		}
 	}
