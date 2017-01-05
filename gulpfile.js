@@ -4,6 +4,7 @@
 
 // gulpfile.js
 var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
 
 gulp.task('babel', function() {
