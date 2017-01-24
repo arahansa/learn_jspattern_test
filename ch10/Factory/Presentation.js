@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿var Conference = Conference || {};
+var Conference = Conference || {};
 Conference.Presentation = function(title, presenter) {
   'use strict';
   if (!(this instanceof Conference.Presentation)) {
