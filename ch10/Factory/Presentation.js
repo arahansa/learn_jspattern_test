@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿var Conference = Conference || {};
 Conference.Presentation = function(title, presenter) {
   'use strict';
