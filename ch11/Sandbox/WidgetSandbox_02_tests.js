@@ -19,7 +19,7 @@ describe('Conference.WidgetSandbox', function(){
             it('위젯 함수가 누락되면 예외를 던진다', function(){
                 [null, undefined, 1, "SomeString", false].forEach(function testInvalid(notAFcn){
                     expect(function shouldThrow(){
-                        
+
                     }).toThrowError(Conference.WidgetSandbox.messages.fcnMustBeProvided);
                 });
             });
